@@ -8,6 +8,7 @@ output:
     theme: architect
     highlight: github
 ---
+<div style="text-align: justify">
 
 # PACOTE
 
@@ -51,9 +52,46 @@ Busquei separar os resultados das avaliações por sub-temas, são eles:
 
 - **Temas Tratados**.
 
+Em cada um dos sub-temas, vou buscar associar à escrita de vocês, conforme 
+texto abaixo:
+
+"**_Segundo Carvalho, Fleury e Lopes (2013) há diferentes abordagens que 
+podem ser consideradas na construção de uma revisão sistemática da 
+literatura, entre elas: abordagem bibliométrica, integrativa e a 
+meta-análise. Em todas essas propostas existe a preocupação de se 
+concentrar nos principais estudos publicados para identificar padrões sobre 
+características de pesquisa ou limitações nos campos de estudos. Entre 
+essas características, Mineiro et al (2018) citam a (i) evolução de 
+publicações e citações; (ii) autores mais citados; e (iii) obras mais 
+citadas. Souza e Zambalde (2016) adicionam a sistematização os (i) 
+principais pesquisadores, países e instituições; (ii) principais 
+periódicos, (iii) principais áreas de pesquisa e, (iv) as redes de citação 
+entre os principais pesquisadores e áreas de pesquisa. Já Souza e Ribeiro 
+(2013) adicionam a (i) evolução dos temas; (ii) abordagens metodológicas e 
+(iii) referências usadas nos artigos._**"
+
+"**_Já os estudos de Huang et al. (2023) adicionam (i) tópicos populares, 
+(ii) grupos temáticos, (iii) colaborações de co-autores, (iv) 
+palavras-chave e (v) análise da linha do tempo de palavras-chaves._**"
+
+Por fim, ressalto que sempre que se pretende proceder uma análise 
+bibliométrica, necessariamente deve-se filtrar a amostra de documentos 
+apenas para o tipo "artigo de revista indexada (journal)". Este 
+procedimento é justificado pelo fato dos demais tipos de documentos 
+(artigos de congresso, livro, capítulo de livro, etc.), não possuírem um 
+padrão de alocação de referências. K
+
 # RESULTADOS
 
 ## Informações Gerais
+
+Na tabela abaixo é apresentado um quadro resumo com as principais 
+informações da amostra consolidada de documentos (por amostra consolidada, 
+me refiro a junção dos dados baixados das bases web of science e scopus). 
+Por sua vez, esse quadro resumo já apresenta uma série de indicadores muito 
+interessantes e, ao mesmo passo, muito difíceis de serem calculados e eu 
+não conheço outro aplicativo/software que calcule os respectivos 
+indicadores. 
 
 ```{r, include = TRUE, echo = FALSE, results = 'asis'}
 
@@ -61,11 +99,30 @@ library(magrittr, include.only = '%>%')
 
 principais_informacoes <- 
   readxl::read_xlsx(path = '../dados/principais_informacoes.xlsx',
-                    range = 'A4:B21',
+                    range = 'A4:B22',
                     col_names = c('Variável de Análise','Resultado')) 
 
 knitr::kable(principais_informacoes)
 ```
+
+Os principais indicadores a serem destacados são:
+
+- **Document Average Age**: Esse indicador apresenta o tempo médio que um 
+artigo no tema é citado. Assim, ele pretende apresentar uma "data de 
+validade" de uma contribuição científica no campo de estudo;
+
+- **References**: Soma das referências utilizadas na amostra consolidada. 
+Dá uma ideia de "tamanho" do campo de estudo.
+
+- **AUTHORS COLLABORATION**: Os três indicadores abaixo desse tópico 
+apresentam a conjuntura de colaboração no campo de pesquisa. um destaque 
+especial para **International co-authorships %**, pois esse indicador 
+apresenta uma média de quantos artigos da amostra possui co-autores de 
+diferentes países.
+
+Todo o quadro resumo apresentado representa um ponto de partida para 
+qualquer análise bibliométrica consistente na medida em que permite a 
+discussão acerca da base de dados utilizada. 
 
 ## Autores
 
