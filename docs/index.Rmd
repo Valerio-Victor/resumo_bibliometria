@@ -53,11 +53,19 @@ Busquei separar os resultados das avaliações por sub-temas, são eles:
 
 # RESULTADOS
 
-```{r, include = FALSE, echo = FALSE, results = 'asis'}
-knitr::kable(head(iris, 10))
-```
-
 ## Informações Gerais
+
+```{r, include = TRUE, echo = FALSE, results = 'asis'}
+
+library(magrittr, include.only = '%>%')
+
+principais_informacoes <- 
+  readxl::read_xlsx(path = '../dados/principais_informacoes.xlsx',
+                    range = 'A4:B21',
+                    col_names = c('Variável de Análise','Resultado')) 
+
+knitr::kable(principais_informacoes)
+```
 
 ## Autores
 
