@@ -1,0 +1,72 @@
+---
+title: 'RELATÓRIO PARA ARTIGO'
+subtitle: 'Principais Resultados do Pacote Bibliometrix (Diferentes)'
+author: 'Victor Valerio'
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+# PACOTE
+
+O R é o software que possui funções, isto é, operações pré-programadas. Um
+exemplo de uma função pode ser exemplificada abaixo: 
+
+- Operação não pré-programada (soma de um mais dois): $1+2=3$;
+
+- Uso da função (operação pré-programada de soma de um mais dois): 
+$sum(1,2)$.
+
+Existem milhares de funções no R, mas para ter acesso as diferentes funções
+é necessário baixar pacotes. Assim, por sua vez, pacotes são conjuntos de 
+funções focadas em algum tema. Digo isso pois as funções que geram os 
+resultados bibliométricos são de um pacote chamado **bibliometrix^[Para 
+citar o pacote no artigo utilizar essa referência "**_Aria, M. & Cuccurullo, 
+C. (2017) bibliometrix: An R-tool for comprehensive science mapping 
+analysis, Journal of Informetrics, 11(4), pp 959-975, Elsevier._**"].**
+
+
+# INTRODUÇÃO
+
+O bibliometrix permite uma infinidade de avaliações a partir de diferentes 
+perspectivas. Contudo, como existem vários softwares bibliométricos, foquei 
+apenas nos resultados que são as reais contribuições do pacote (as 
+avaliações que não são "carnes de vacas").
+
+Busquei separar os resultados das avaliações por sub-temas, são eles:
+
+- **Informações Gerais**;
+
+- **Autores**;
+
+- **Artigos**;
+
+- **Períodicos**;
+
+- **Países**;
+
+- **Referências**;
+
+- **Temas Tratados**.
+
+# RESULTADOS
+
+```{r, include = FALSE, echo = FALSE, results = 'asis'}
+knitr::kable(head(iris, 10))
+```
+
+## Informações Gerais
+
+## Autores
+
+## Artigos
+
+## Períodicos
+
+## Países
+
+## Referências
+
+## Temas Tratados
